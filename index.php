@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>2ano</title>
-  <link rel="stylesheet" href="CSS.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <?php include("header.html"); ?>
