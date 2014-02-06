@@ -1,38 +1,31 @@
-.logo{
-background-image: url(./img/2ano.png);
-background-repeat: no-repeat;
-height: 300px;
-width: 300px;
-margin-left: 16%;
-display: inline-block;
-vertical-align: top;
+#haut_de_page{
+	position: relative;
+	top: 10px;
+	left: -177px;
 }
 
 .links{
-text-align: center;
-margin-bottom: 50px;
+	text-align: center;
+	margin-bottom: 50px;
 }
 
 a{
-margin: 20px;
-}
-
-body{
-background-image: url(./img/bande.jpg);
-background-repeat: repeat-y;
-background-position: center;
+	margin: 20px;
 }
 
 h1{
-text-align: center;
-margin-left: 150px;
-margin-top: 100px;
-display: inline-block;
-vertical-align: top;
+
+	text-align: center;
+	margin-left: 150px;
 }
 
 p{
-text-align: center;
-width: 950px;
-margin: auto;
+	margin: 0 50px 0 50px ;
+	text-align: justify;
+}
+
+.box{
+	background-color: pink;
+	width: 800px;
+	margin: auto;
 }
