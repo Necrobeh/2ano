@@ -2,5 +2,5 @@
 $pServeur = 'localhost';
 $pNom = 'root';
 $pMotPasse = '';
-$pBase = 'garage';
+$pBase = '2ano';
 ?>
