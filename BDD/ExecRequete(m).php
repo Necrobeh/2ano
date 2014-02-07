@@ -10,9 +10,4 @@
 		die ("<b>Message de MySQL :</b> " . mysql_error($connexion));
 	}
  }
- 
- // Recherche de l'objet suivant 
- function ObjetSuivant ($resultat) {
-	return mysql_fetch_object ($resultat);
- }
  ?>

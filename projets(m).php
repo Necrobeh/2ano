@@ -8,7 +8,7 @@
 <body>
 <?php 
 	include("header.html"); 
-	$bdd = new PDO('mysql:host=localhost;dbname=2ano', 'root', '');
+
 	
 	include("footer.html"); 
 ?>
