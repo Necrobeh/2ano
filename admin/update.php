@@ -1,9 +1,10 @@
 <?php
+
 include "../bdd/Connect.php";
 include "../bdd/Connexion.php";
 include "../bdd/ExecRequete.php";
 
-$titre=$_POST['title'];
+$titre=htmlentities($_POST['title'], ENT_QUOTES, "UTF-8");
 $content= $_POST['content'];
 
 $connexion=Connexion($pServeur, $pNom, $pMotPasse, $pBase);

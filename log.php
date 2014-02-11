@@ -12,22 +12,27 @@ include("BDD/ExecRequete.php");
 
 $connexion=Connexion($pServeur, $pNom, $pMotPasse, $pBase);
 
-$req_id = 'SELECT identifiant FROM admin';
-$result_id = ExecRequete ($req_id, $connexion);
-$req_mdp = 'SELECT mdp FROM admin';
-$result_mdp = ExecRequete ($req_mdp, $connexion);
+$req = 'SELECT * FROM admin';
+$resultSelect = ExecRequete ($req, $connexion);
+
+$row = ObjetSuivant($resultSelect);
+$result_id = $row->Identifiant;
+$result_mdp = $row->MdP;
+
 
 if(isset($result_id) AND ($result_mdp))
 {
-	if(isset($_POST['id']) AND ($_POST['mdp']))
+	if(isset($_POST['id']) AND (md5($_POST['mdp'])))
 	{
-		if($result_id == $_POST['id'] AND $result_mdp == $_POST['mdp'])
+		if($result_id == $_POST['id'] AND $result_mdp == md5($_POST['mdp']))
 		{
-		//Envoi vers le formulaire d'édition en tiny mce
+			session_start();
+			$_SESSION['admin']=true;
+			header('Location:admin/edit_projet.php');
 		}
 		else
 		{
-		echo 'Mauvais identifiant et/où mot de passe';
+			echo 'Mauvais identifiant et/où mot de passe '. md5($_POST['mdp']) .' // '. $result_mdp;
 		}
 	}
 }

@@ -1,3 +1,7 @@
+<?php 
+session_start();
+if($_SESSION['admin']){
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -25,3 +29,9 @@
 	</form>
 </body>
 </html>
+<?php
+}else{
+	session_destroy();
+	header('location:http://localhost/2ano/');
+}
+?>
